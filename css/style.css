@@ -1,0 +1,176 @@
+.mainskip{
+    position: absolute;
+    top: -1000px;
+    overflow: hidden;
+}
+
+.mainskip:focus{
+    top:25px;
+}
+
+/*
+Wrote the css section of code above this after looking at the following page by W3Schools:
+https://www.w3schools.com/accessibility/accessibility_skip_links.php
+*/
+
+
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+header img{
+    grid-column: 1/1;
+    width: 1fr;
+}
+
+header h1{
+    grid-row:2/2;
+    grid-column: 1/span all;
+}
+
+nav{
+    background-color: #FFCB05;
+    grid-column: 2/span all;
+    text-align: center;
+}
+
+h1{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 300%;
+    color:#00274C;
+}
+
+h2{
+    margin: 10px;
+    font-size: 150%;
+    text-align: center;
+}
+
+h3{
+    margin: 5px;
+    font-size: 115%;
+}
+
+nav ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+nav ul li a{
+    font-size: 75%;
+    text-align: center;
+    margin: 50% 5% 5% 5%
+}
+
+
+.active{
+    font-size: 125%;
+    color: #00274C;
+    font-weight: bolder;
+   
+}
+
+ul{
+    margin: 5px;
+}
+
+ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ol{
+    margin: 5px;
+}
+
+ol li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #00274C;
+    color: white;
+}
+
+footer a{
+    color: #FFCB05;
+}
+
+
+img{
+    width: 100%;
+    align-items: center;
+}
+
+iframe{
+    width: 95%;
+    align-content: center;
+}
+
+p{
+    margin: 5px;
+}
+
+
+section>a{
+    margin: 5px;
+}
+
+section{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.articles h2{
+    grid-column:1/4;
+}
+
+.articles p{
+    grid-column: 1/4;
+}
+
+.articles h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.links{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 10px;
+}
+
+.pages h3{
+    text-align: center;
+}
+
+.pages a{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.pages p{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+article{
+    margin: 10px 0px 10px 0px;
+}
