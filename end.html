@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ending your experience</title>
+        <!--The following code was based off of the W3School tutorial for google fonts, found here: 
+    https://www.w3schools.com/css/css_font_google.asp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans"/>
     <link rel="stylesheet" href="css/html5reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
@@ -19,8 +22,9 @@
                 <li><a href="end.html" class="active">Ending your Experience</a></li>
             </ul>
         </nav>
-        <h1>Completing, Reflecting, and Translating Your Impact</h1>
     </header>
+    <h1>Completing, Reflecting, and Translating Your Impact</h1>
+
     <main id="main">
         <h2>Close your project responsibly, evaluate your outcomes, and articulate your real-world experience for your future career.</h2>
 
@@ -36,7 +40,7 @@
                 Without reflection, experience is just something that happened to you; with reflection, experience becomes expertise. 
                 Learning to translate complex, messy project narratives into clear resume bullets and portfolio case studies is what turns your UMSI education into your greatest professional asset.
             </p>
-        </section>
+        </section><br>
 
 
         <section>
@@ -44,19 +48,19 @@
             <p>
                 Responsible offboarding is an ethical mandate in engaged learning. 
                 Delivering high-quality technical assets is only half the job—ensuring the community partner or client can independently maintain, update, and benefit from your work long after the semester ends is what defines a successful project.
-            </p>
+            </p><br>
             <img src="images/LCSIB_RESIZED.png" alt="Picture of the LCSIB.">
-            <p>Before handing a project down, make sure to do the following:</p>
+            <p>Before handing a project down, make sure to do the following:</p><br>
             <ul>
                 <li>Complete & Transition Work: Package code, design files, reports, and technical assets into accessible, usable formats for your partner.</li>
                 <li>Close Relationships Appropriately: Formally conclude the project with gratitude, clarity, and clear future boundaries.</li>
                 <li>Evaluate Impact: Measure project outcomes against initial scoping goals and gather client feedback.</li>
             </ul>
-        </section>
+        </section><br>
 
         <section>
             <h3>Featured Resources</h3>
-            <p>Below are links to resources that can help with ensuring a quality handoff of your projects to partners and clients</p>
+            <p>Below are links to resources that can help with ensuring a quality handoff of your projects to partners and clients</p><br>
             <ul class="links">
                 <li><a href="https://docs.google.com/document/d/1-gfg_EZ3T8pa3T0a130Qvtpl1bYoLOVEHSNpGHcJtFA/edit?usp=drive_link">Exiting a Community-Engaged Project Worksheet:</a> Guided template for responsible project transition, asset delivery, and offboarding.</li>
                 <li><a href="https://docs.google.com/document/d/1TrEDolwmOIlXgYgAP9VvlOGoYOwFfe6KxzZOgZSVYVw/edit?usp=drive_link">Project Scoping Handout & Terms:</a> Re-evaluate final deliverables against original project commitments.</li>
@@ -71,7 +75,12 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p id="year">&copy; 2026 Regents of the University of Michigan</p>
     </footer>
 </body>
+
+<!-- Code taken and modified from the following website: https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/, provided in the Canvas assignment details.-->
+ <script>
+  document.querySelector("footer #year").innerHTML = "&copy " + new Date().getFullYear() + " Regents of the University of Michigan";
+</script>
 </html>

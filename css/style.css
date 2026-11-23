@@ -14,10 +14,20 @@ https://www.w3schools.com/accessibility/accessibility_skip_links.php
 */
 
 
+/*
+The following code was based off of the W3School tutorial for google fonts, found here: 
+https://www.w3schools.com/css/css_font_google.asp
+*/
+body{
+    font-family: 'IBM Plex Sans';
+}
+
 
 header{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: #FFCB05;
+    align-items: center;
 }
 
 header img{
@@ -41,6 +51,7 @@ h1{
     margin-bottom: 50px;
     text-align: center;
     font-size: 300%;
+    font-weight: bold;
     color:#00274C;
 }
 
@@ -48,6 +59,7 @@ h2{
     margin: 10px;
     font-size: 150%;
     text-align: center;
+    font-weight: bold;
 }
 
 h3{
@@ -61,14 +73,14 @@ nav ul{
 }
 
 nav ul li a{
-    font-size: 75%;
+    font-size: 80%;
     text-align: center;
     margin: 50% 5% 5% 5%
 }
 
 
 .active{
-    font-size: 125%;
+    font-size: 100%;
     color: #00274C;
     font-weight: bolder;
    
@@ -128,24 +140,60 @@ section{
     margin-bottom: 25px;
 }
 
+/*Code was taken and modified from the following website: https://www.w3schools.com/css/css_link.asp*/
+
+a{
+   text-decoration: none;
+}
+
+a:hover{
+    color:#00274C;
+}
+
+/* Code for the article section taken and modified from the following: https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels, in use of styling the articles in a flex with snapping and having the arrows. That code is below*/
 
 .articles{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    anchor-name: --anchor;
 }
 
-.articles h2{
-    grid-column:1/4;
-}
 
-.articles p{
-    grid-column: 1/4;
-}
-
-.articles h3{
+.articles article{
+    flex: 0 0 85%;
     text-align: center;
-    margin-bottom: 10px;
+    scroll-snap-align: center;
+    border: #00274C 5px solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 10px;
 }
+
+.articles::scroll-button(*){
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    position-anchor: --anchor;
+}
+
+.articles::scroll-button(left){
+    content: "<" / "Previous";
+    right: calc(anchor(left) - 70px);
+    bottom: calc(anchor(top) - 13px);
+}
+
+.articles::scroll-button(right){
+    content: ">" / "Next"; 
+    right: calc(anchor(right) + 20px);
+    bottom: calc(anchor(top) - 13px);
+}
+
+
+
+/* This section was written with code taken and modified from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Overflow/Carousels*/
+
 
 .links{
     display: grid;
@@ -173,4 +221,89 @@ h3{
 
 article{
     margin: 10px 0px 10px 0px;
+}
+
+aside{
+    text-align: center;
+}
+
+footer p{
+    text-align: left;
+}
+
+#errorlinks{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#errorlinks a{
+    font-size: 50px;
+    text-align: center;
+}
+
+@media (min-width: 1440px) {
+
+    nav ul li a{
+        font-size: 200%;
+    }
+
+    .active{
+        font-size: 300%;
+        color: #00274C;
+        font-weight: bolder;
+   }
+
+   p{
+    font-size: 20px;
+    text-align: center;
+   }
+
+   li{
+    font-size: 20px;
+   }
+
+   article {
+    text-align: center;
+   }
+
+    article a{
+    text-align: center;
+    font-size: 20px;
+   }
+
+   h1{
+    font-size: 400%;
+   }
+    h2{
+    font-size: 250%;
+   }
+    h3{
+    font-size: 175%;
+   }
+
+   /*Code with list-style was made with help from the following website: https://www.w3schools.com/cssref/pr_list-style.php*/
+
+   .links{
+        grid-template-columns: 1fr 1fr 1fr;
+        list-style: none;
+   }
+
+   .links #final{
+        grid-column: 1/4;
+   }
+
+   #relationship{
+    text-align: center;
+   }
+
+   #resources{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+   }
+
+   #resources h4{
+    text-align: center;
+   }
+
 }

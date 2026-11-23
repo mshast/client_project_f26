@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engaged Learning Resources | UMSI</title>
+    <!--The following code was based off of the W3School tutorial for google fonts, found here: 
+    https://www.w3schools.com/css/css_font_google.asp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans"/>
     <link rel="stylesheet" href="css/html5reset.css"/>
     <link rel="stylesheet" href="css/style.css"/>
 
@@ -20,10 +23,12 @@
                 <li><a href="during.html">During Your Experience</a></li>
                 <li><a href="end.html">Ending your Experience</a></li>
             </ul>
-        </nav>
-    <h1>Welcome to the UMSI Engaged Learning Office</h1>
+          </nav>
 
     </header>
+
+    <h1>Welcome to the UMSI Engaged Learning Office</h1>
+
     <main id="main">
     <section>
       <h2>Build Skills. Work with Partners. Have an Impact.</h2>
@@ -31,9 +36,9 @@
        The UMSI Engaged Learning Office connects students with opportunities to apply classroom knowledge to real challenges. Use this site to prepare for your experience, manage your work, and reflect on what you learned.
       </p>
 
-      <iframe width="560px" height="315px" src="https://www.youtube.com/embed/81ZO9RfIJEQ?si=tBp82YWZMl1u7CVS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/81ZO9RfIJEQ?si=tBp82YWZMl1u7CVS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
          <!-- Note: this iframe might cause an Axe ARIA error - that's not on you that's on YouTube! -->
-    </section>
+    </section><br>
 
 <section>
     <h2>Why Use This Resource?</h2>
@@ -47,33 +52,33 @@
         <li><strong>Build professional skills:</strong> Strengthen your communication, teamwork, project management, and ethical decision-making.</li>
         <li><strong>Turn experience into evidence:</strong> Identify what you learned and communicate your impact in resumes, portfolios, and interviews.</li>
     </ul>
-</section>
+</section><br>
 
  <section class="pages">
     <h2>Guidance for Every Stage</h2>
-    <p>Engaged learning projects can change as new needs, constraints, and insights emerge. Find guidance for the stage of work you are navigating <strong>now.</strong></p>
+    <p>Engaged learning projects can change as new needs, constraints, and insights emerge. Find guidance for the stage of work you are navigating <strong>now.</strong></p><br>
     <article>
       <h3>Start Here</h3>
       <p>Set learning goals, understand the project context, examine your assumptions, define team roles, and establish a strong relationship with your partner.</p>
       <a href="prep.html">Prepare for your experience</a>
-    </article>
+    </article><br>
 
     <article>
       <h3>Navigate the Experience</h3>
       <p>Manage projects and teams, conduct ethical research, communicate progress, respond to feedback, and work through unexpected challenges.</p>
       <a href="during.html">Find active project resources</a>
-    </article>
+    </article><br>
 
     <article>
       <h3>Wrap Up and Move Forward</h3>
       <p>Complete a responsible handoff, evaluate your impact, reflect on your growth, and translate your work into resume, portfolio, and interview content.</p>
       <a href="end.html">Plan your next steps</a>
     </article>
-  </section>
+  </section><br>
 
-   <section class="articles">
     <h2>Featured Programs</h2>
-    <p>Explore opportunities to collaborate with organizations, communities, student teams, and partners in Michigan and beyond.</p>
+    <p>Explore opportunities to collaborate with organizations, communities, student teams, and partners in Michigan and beyond.</p><br>
+   <section class="articles">
     <article>
     <h3><a href="https://mcompass.umich.edu/_portal/tds-program-brochure?programid=12810">AI Clinic Project Experience</a></h3>
     <p>Work with a team on an applied artificial intelligence project for a partner organization.</p>
@@ -108,7 +113,8 @@
     <h2>About the Engaged Learning Office</h2>
     <p>The Engaged Learning Office works with partners across industries and sectors, from technology companies to grassroots nonprofits and cultural heritage institutions, to provide project-based opportunities for UMSI students.</p>
     <p>Its mission is to facilitate transformational engaged learning experiences and enable innovative, sustainable, and mutually beneficial information solutions for local and global communities.</p>
-  </section>
+  </section><br>
+
   <aside>
     <h2>Stay Connected with ELO</h2>
     <p>Get updates about ELO programs, workshops, events, and opportunities through the weekly newsletter.</p>
@@ -127,7 +133,13 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p id="year">&copy; 2026 Regents of the University of Michigan</p>
     </footer>
 </body>
+
+
+<!-- Code taken and modified from the following website: https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/, provided in the Canvas assignment details.-->
+ <script>
+  document.querySelector("footer #year").innerHTML = "&copy " + new Date().getFullYear() + " Regents of the University of Michigan";
+</script>
 </html>
