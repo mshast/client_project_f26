@@ -143,7 +143,7 @@ section{
 /*Code was taken and modified from the following website: https://www.w3schools.com/css/css_link.asp*/
 
 a{
-   text-decoration: none;
+   text-decoration: underline;
    color: #00274C;
 }
 
